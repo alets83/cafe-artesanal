@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Café Latte",
+        "category": "",
+        "description": "Suave espresso con leche vaporizada y una pequeña capa de espuma. Perfecto para comenzar el día."
+    },
+    {
+        "id": 2,
+        "name": "Pastel de Chocolate",
+        "category": "",
+        "description": "Delicioso bizcocho de chocolate oscuro con cobertura cremosa y chispas de cacao."
+    },
+    {
+        "id": 3,
+        "name": "Jugo Verde",
+        "category": "",
+        "description": "Mezcla refrescante de espinaca, manzana verde, apio, pepino y un toque de limón."
+    },
+    {
+        "id": 4,
+        "name": "Capuchino",
+        "category": "",
+        "description": "Café espresso con partes iguales de leche vaporizada y espuma de leche. Espolvoreado con canela."
+    },
+    {
+        "id": 5,
+        "name": "Cheesecake de Fresa",
+        "category": "",
+        "description": "Base crujiente de galleta, queso crema suave y salsa natural de fresa encima."
+    },
+    {
+        "id": 6,
+        "name": "Jugo de Naranja",
+        "category": "",
+        "description": "Recién exprimido, natural y sin azúcares añadidos. Ideal para un desayuno saludable."
+    },
+    {
+        "id": 7,
+        "name": "Caramel Macchiato",
+        "category": "",
+        "description": "Café vainilla con leche al vapor, espresso y un toque de caramelo. Dulce y suave."
+    },
+    {
+        "id": 8,
+        "name": "Tarta de Limón",
+        "category": "",
+        "description": "Masa quebrada con relleno cremoso de limón y merengue tostado en la superficie."
+    },
+    {
+        "id": 9,
+        "name": "Juego de Piña y Menta",
+        "category": "",
+        "description": "Jugo tropical con piña fresca, hierbabuena y un poco de hielo triturado."
+    }
+]

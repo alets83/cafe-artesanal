@@ -1,0 +1,73 @@
+.main-header {
+  width: 100%;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* Logo izquierda, Links derecha */
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Estilos del Logo */
+.logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-circle {
+  background-color: #2b2b2b;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.brand-text {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.5px;
+}
+
+/* Estilos del Menú */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a.active {
+  color: #d35400; /* Naranja de la imagen */
+  font-weight: 600;
+}
+
+.cart-item {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Contenedor de las páginas */
+.page-content {
+  width: 100%;
+  min-height: 80vh;
+}
