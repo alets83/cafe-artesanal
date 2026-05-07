@@ -1,0 +1,59 @@
+.CardComment {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    max-width: 400px; /* Opcional: para que no ocupe todo el ancho */
+    transition: transform 0.2s ease;
+    flex: 1 1 300px; /* Crece, se encoge y su tamaño base es 300px */
+    max-width: 400px; /* Para que no se estiren demasiado en pantallas enormes */
+    display: flex;
+    flex-direction: column;
+}
+
+.CardComment:hover {
+    transform: translateY(-9px);
+}
+
+.CardComment h3 {
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    font-size: 1.25rem;
+}
+
+.CardComment h4 {
+    margin: 0 0 12px 0;
+    color: #e67e22; /* Color café/naranja para los productos */
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.CardComment blockquote {
+    margin: 0 0 15px 0;
+    font-style: italic;
+    color: #555;
+    line-height: 1.5;
+    border-left: 3px solid #ddd;
+    padding-left: 15px;
+}
+
+.CardComment h5 {
+    margin: 5px 0 0 0;
+    color: #888;
+    font-weight: 400;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-right: 15px; /* Separa fecha y hora */
+}
+
+/* Estilo extra por si quieres que la fecha y hora se vean en una sola línea */
+.CardComment h5:last-child::before {
+    content: " • ";
+    margin-right: 5px;
+    color: #ccc;
+}
+

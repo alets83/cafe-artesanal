@@ -10,7 +10,7 @@
 // export default Contacto;
 
 import React from 'react';
-import './Contacto.css'; // Asegúrate de crear este archivo CSS
+import './Contacto.css'; 
 
 function Contacto() {
   const handleSubmit = (e) => {

@@ -1,0 +1,61 @@
+/* Contenedor principal de la tarjeta */
+.cardProduct {
+  display: flex;
+  flex-direction: column; /* Por defecto vertical para móviles */
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  align-items: flex-start;
+  transition: transform 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.cardProduct:hover {
+  transform: translateY(-4px);
+}
+
+/* Estilos de los textos */
+.cardProduct h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #2d3748;
+  min-width: 150px; /* Evita que el título se comprima mucho */
+}
+
+.cardProduct h5 {
+  margin: 0;
+  padding: 4px 8px;
+  background-color: #f7fafc;
+  color: #718096;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.cardProduct blockquote {
+  margin: 0;
+  color: #4a5568;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex: 1; /* Hace que la descripción ocupe el espacio restante */
+}
+
+/* --- RESPONSIVO: MODO HORIZONTAL --- */
+@media (min-width: 768px) {
+  .cardProduct {
+    flex-direction: row; /* Cambia a fila en pantallas medianas/grandes */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+    justify-content: space-between;
+  }
+
+  /* Opcional: añade una línea divisoria antes de la descripción */
+  .cardProduct blockquote {
+    border-left: 2px solid #edf2f7;
+    padding-left: 1.5rem;
+    margin-left: 1rem;
+  }
+}

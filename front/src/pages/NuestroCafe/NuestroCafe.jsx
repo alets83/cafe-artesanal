@@ -1,11 +1,71 @@
+import { useEffect, useState } from 'react';
 import React from 'react';
+import CardProduct from '../../components/CardProduct/CardProduct';
 
-function NuestroCafe() {
+function Products() {
+
+    const [ products, setProducts ] = useState( [] );
+    const [ loading, setLoading ] = useState( true );
+    const [ error, setError ] = useState( null );
+
+    useEffect( () => {
+        const fetchProducts = async () => {
+            try {
+                setLoading( true );
+                const response = await fetch( "http://localhost:8282/products" );
+
+                if( ! response.ok ) throw new Error( `HTTP Error ${ response.status }`  );
+
+                const data = await response.json();
+                setProducts( data.data );
+                console.log (data);
+            }
+            catch( e ) {
+                setError( e.message );
+                console.log( e )
+            }
+            finally {
+                setLoading( false );
+            }
+        }
+        fetchProducts();
+    }, []);
+
+// const products = [ {
+//       id: 1,
+//       name: "Café Latte",
+//       category: "beverages",
+//       description: "Suave espresso con leche vaporizada y una pequeña capa de espuma."
+//     },
+//     {
+//       id: 2,
+//       name: "Pastel de Chocolate",
+//       category: "foods",
+//       description: "Delicioso bizcocho de chocolate oscuro con cobertura cremosa."
+//     },
+//     {
+//       id: 3,
+//       name: "Jugo Verde",
+//       category: "beverages",
+//       description: "Mezcla refrescante de espinaca, manzana verde, apio y limón."
+//     }];
+
+
   return (
     <div className="container-web">
       <header className="hero">
         <div className="hero-content">
           <h1>Nuestra Selección</h1>
+            <div className='block products'>
+              {products.map( product => (
+                <CardProduct
+                  key={ product.id }
+                  name={ product.name }
+                  category={ product.category }
+                  description={ product.description }
+                  />
+                ))} 
+                </div>
           <p>Granos cultivados con pasión y respeto por la tierra.</p>
         </div>
       </header>
@@ -28,4 +88,4 @@ function NuestroCafe() {
   );
 }
 
-export default NuestroCafe;
+export default Products;

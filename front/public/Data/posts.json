@@ -1,8 +1,5 @@
-import CardComment from "../../components/CardComment/CardComment";
-import styles from "./Terminos.module.css"
-
-const comments = [
- {
+[
+    {
         "id": 1,
         "title": "Excelente café latte",
         "content": "El mejor café latte que he probado. Suave, bien balanceado y a la temperatura perfecta.",
@@ -57,26 +54,29 @@ const comments = [
         "date": "2025-03-09",
         "time": "16:10:00",
         "products": [ "Caramel Macchiato" ]
+    },
+    {
+        "id": 8,
+        "title": "Tarta de limón muy ácida",
+        "content": "El sabor a limón era demasiado fuerte para mí, pero el merengue estaba bien hecho.",
+        "date": "2025-03-14",
+        "time": "12:45:00",
+        "products": [ "Tarta de Limón" ]
+    },
+    {
+        "id": 9,
+        "title": "Combinación de jugos",
+        "content": "Pedí el jugo de piña con menta y me sorprendió gratamente. Muy refrescante.",
+        "date": "2025-03-12",
+        "time": "14:20:00",
+        "products": [ "Jugo de Piña y Menta" ]
+    },
+    {
+        "id": 10,
+        "title": "Buena atención y calidad",
+        "content": "Probé el café latte y el pastel de chocolate. Ambos excelentes. Volveré.",
+        "date": "2025-03-16",
+        "time": "10:05:00",
+        "products": [ "Café Latte", "Pastel de Chocolate" ]
     }
-
-];
-
-function Terminos() {
-  return (
-    <div>
-      <h1>Testimonios</h1>
-        <div className={styles.container}>{comments.map( comments => (
-                <CardComment
-                   key={ comments.id }
-                   title={ comments.title }
-                   content={ comments.content }
-                   date={ comments.date }
-                   time={ comments.time }
-                   products={ comments.products } />
-                ))} 
-        </div>
-    </div>
-  );
-}
-
-export default Terminos;
+]
