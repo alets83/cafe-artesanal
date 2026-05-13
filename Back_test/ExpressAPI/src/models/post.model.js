@@ -10,13 +10,13 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: "title property is requited...",
         minlength: 4,
-        maxlength: 20
+        maxlength: 35
     },
     content: {
         type: String,
         required: "content property is requited...",
         minlength: 10,
-        maxlength: 120
+        maxlength: 180
     },
     date: {
         type: String,

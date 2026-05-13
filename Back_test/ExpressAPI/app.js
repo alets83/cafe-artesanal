@@ -17,7 +17,7 @@ dotenv.config();
 
 const corsOptions = {
     origin: "http://localhost:5173",
-    methods: [ "GET", "POST" ],
+    methods: [ "GET", "POST", "UPDATE", "DELETE"],
     allowedHeaders: [ "Content-Type" ]
 };
 
