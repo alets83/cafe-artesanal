@@ -3,13 +3,14 @@
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between; /* Logo izquierda, Links derecha */
   align-items: center;
   padding: 20px;
-  background-color: #fff;
+  background-color: #e0c9a6;
+  border-radius: 40px;
 }
 
 /* Estilos del Logo */
@@ -34,7 +35,7 @@
 
 .brand-text {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   letter-spacing: -0.5px;
 }
 
@@ -50,14 +51,14 @@
 
 .nav-menu a {
   text-decoration: none;
-  color: #666;
-  font-size: 0.9rem;
+  color: #cb7c05f2;
+  font-size: 1.1rem;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-menu a.active {
-  color: #d35400; /* Naranja de la imagen */
+  color: #6e4a15; /* Naranja de la imagen */
   font-weight: 600;
 }
 
