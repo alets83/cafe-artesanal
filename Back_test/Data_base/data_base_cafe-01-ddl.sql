@@ -15,7 +15,6 @@ CREATE TABLE Roles (
 ) ENGINE=InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
 
-
 CREATE TABLE Users (
 	id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	role_id INT UNSIGNED,
@@ -34,7 +33,6 @@ CREATE TABLE Users (
 	FOREIGN KEY ( role_id ) REFERENCES Roles (id)
 	
 ) ENGINE=InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
-
 
 
 CREATE TABLE Posts (
@@ -56,11 +54,25 @@ CREATE TABLE Posts (
 ) ENGINE=InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
 
+CREATE TABLE Category (
+	id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	category VARCHAR (25) NOT NULL UNIQUE,
+			
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	
+	INDEX idx_products_category_id ( category ),
+	INDEX idx_products_created_at ( created_at ),
+	INDEX idx_products_updated_at ( updated_at )
+	
+	
+) ENGINE=InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+
 
 CREATE TABLE Products (
 	id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	name VARCHAR (35) NOT NULL,
-	category VARCHAR (25) NOT NULL,
+	category_id INT UNSIGNED NOT NULL,
 	description VARCHAR (120) NOT NULL,
 	price DECIMAL (10,2) NOT NULL,
 	images JSON DEFAULT NULL,
@@ -68,13 +80,14 @@ CREATE TABLE Products (
 	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	
-	INDEX idx_products_category ( category ),
+	INDEX idx_products_category ( category_id ),
 	INDEX idx_products_name ( name ),
 	INDEX idx_products_price ( price ),
-	INDEX idx_products_created_at ( created_at )
+	INDEX idx_products_created_at ( created_at ),
+	
+	FOREIGN KEY ( category_id ) REFERENCES Category (id)
 	
 ) ENGINE=InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
-
 
 
 CREATE TABLE Sales (
@@ -95,7 +108,6 @@ CREATE TABLE Sales (
 ) ENGINE=InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
 
-
 CREATE TABLE SaleDetails (
 	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	sale_id INT UNSIGNED NOT NULL,
@@ -114,8 +126,6 @@ CREATE TABLE SaleDetails (
 	FOREIGN KEY ( product_id ) REFERENCES Products (id)
 	
 ) ENGINE=InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
-
-
 
 
 SHOW TABLES;
