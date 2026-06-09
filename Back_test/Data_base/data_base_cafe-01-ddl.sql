@@ -40,10 +40,10 @@ CREATE TABLE Posts (
 	user_id INT UNSIGNED NOT NULL,
 	title VARCHAR (35) NOT NULL,
 	content VARCHAR (180) NOT NULL,
-		
+
 	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-	
+
 	INDEX idx_posts_user_id ( user_id ),
 	INDEX idx_posts_title ( title ),
 	INDEX idx_posts_created_at ( created_at ),
@@ -129,4 +129,3 @@ CREATE TABLE SaleDetails (
 
 
 SHOW TABLES;
--- DESCRIBE Roles;

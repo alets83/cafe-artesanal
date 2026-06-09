@@ -1,5 +1,6 @@
 USE cafe_artesanal;
 DESCRIBE Roles;
+
 INSERT INTO Roles VALUES
 	(NULL, "ADMIM", CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 	(NULL, "Seller", CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
@@ -51,29 +52,20 @@ INSERT INTO Posts VALUES
 
 
 INSERT INTO Category VALUES
-	(NULL, "Bebida" , CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
-	
+	(NULL, "Bebida" , CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);	
 INSERT INTO Category VALUES
 	(NULL, "Alimentos" , CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 	
 
 INSERT INTO Products VALUES 
 	(NULL, "Café Latte", 1, "Suave espresso con leche vaporizada y una pequeña capa de espuma. Perfecto para comenzar el día.", 45.00, JSON_OBJECT('image', '[]'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
-
 INSERT INTO Products VALUES (NULL, "Pastel de Chocolate", 2, "Delicioso bizcocho de chocolate oscuro con cobertura cremosa y chispas de cacao.", 55.00, JSON_OBJECT('image', '[]'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
-
 INSERT INTO Products VALUES (NULL, "Jugo Verde", 1, "Mezcla refrescante de espinaca, manzana verde, apio, pepino y un toque de limón.", 40.00, JSON_OBJECT('image', '[]'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
-
 INSERT INTO Products VALUES (NULL, "Capuchino", 1, "Café espresso con partes iguales de leche vaporizada y espuma de leche. Espolvoreado con canela.", 45.00, JSON_OBJECT('image', '[]'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
-
 INSERT INTO Products VALUES (NULL, "Cheesecake de Fresa", 2, "Base crujiente de galleta, queso crema suave y salsa natural de fresa encima.", 50.00, JSON_OBJECT('image', '[]'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
-
 INSERT INTO Products VALUES (NULL, "Jugo de Naranja", 1, "Recién exprimido, natural y sin azúcares añadidos. Ideal para un desayuno saludable.", 35.00, JSON_OBJECT('image', '[]'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
-
 INSERT INTO Products VALUES (NULL, "Caramel Macchiato", 1, "Café vainilla con leche al vapor, espresso y un toque de caramelo. Dulce y suave.", 50.00, JSON_OBJECT('image', '[]'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
-
 INSERT INTO Products VALUES (NULL, "Tarta de Limón", 2, "Masa quebrada con relleno cremoso de limón y merengue tostado en la superficie.", 48.00, JSON_OBJECT('image', '[]'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
-
 INSERT INTO Products VALUES (NULL, "Juego de Piña y Menta", 1, "Jugo tropical con piña fresca, hierbabuena y un poco de hielo triturado.", 42.00, JSON_OBJECT('image', '[]'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 
@@ -89,11 +81,3 @@ INSERT INTO SaleDetails VALUES
 	(NULL, 2 , 1, 1, 35.45, 35.45, CURRENT_TIMESTAMP);
 INSERT INTO SaleDetails VALUES
 	(NULL, 2 , 2, 1, 45.45, 45.45, CURRENT_TIMESTAMP);
-
-
-SELECT * FROM Roles;
-SELECT * FROM Users;
-SELECT * FROM Posts;
-SELECT * FROM Products;
-SELECT * FROM Sales;
-SELECT * FROM SaleDetails;
