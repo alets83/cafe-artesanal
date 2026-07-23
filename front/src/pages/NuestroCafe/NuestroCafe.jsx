@@ -12,13 +12,16 @@ function Products() {
         const fetchProducts = async () => {
             try {
                 setLoading( true );
-                const response = await fetch( "http://localhost:8282/products" );
+                const response = await fetch( "http://localhost:8282/api/products" );
 
                 if( ! response.ok ) throw new Error( `HTTP Error ${ response.status }`  );
 
                 const data = await response.json();
                 setProducts( data.data );
-                console.log (data);
+                // console.log (data);
+                // console.log (data.success);
+                // console.log (data.total);
+                // console.log (data.datos);
             }
             catch( e ) {
                 setError( e.message );

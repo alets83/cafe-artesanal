@@ -12,7 +12,7 @@ function Testimonios() {
     const fetchTestimonios = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:8282/posts");
+        const response = await fetch("http://localhost:8282/api/posts");
         
         if (!response.ok) {
           throw new Error(`HTTP Error ${response.status}`);
